@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <!-- Add Bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-sm mt-5 mx-auto">
+        <h1 class="text-center mb-4">Prediksi Nilai</h1>
+        <form method="post" action="/predict">
+            <!-- Add a CSRF token for security -->
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+            <div class="mb-3">
+                <label for="firstMeanEDA" class="form-label">firstMeanEDA:</label>
+                <input type="float" class="form-control" id="firstMeanEDA" name="firstMeanEDA" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="midMeanEDA" class="form-label">midMeanEDA:</label>
+                <input type="float" class="form-control" id="midMeanEDA" name="midMeanEDA" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastMeanEDA" class="form-label">lastMeanEDA:</label>
+                <input type="float" class="form-control" id="lastMeanEDA" name="lastMeanEDA" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="MeanRR" class="form-label">MeanRR:</label>
+                <input type="float" class="form-control" id="MeanRR" name="MeanRR" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="MeanHR" class="form-label">MeanHR:</label>
+                <input type="float" class="form-control" id="MeanHR" name="MeanHR" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="MinHR" class="form-label">MinHR:</label>
+                <input type="float" class="form-control" id="MinHR" name="MinHR" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="MaxHR" class="form-label">MaxHR:</label>
+                <input type="float" class="form-control" id="MaxHR" name="MaxHR" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="SDNN" class="form-label">SDNN:</label>
+                <input type="float" class="form-control" id="SDNN" name="SDNN" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="RMSSD" class="form-label">RMSSD:</label>
+                <input type="float" class="form-control" id="RMSSD" name="RMSSD" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="NNx" class="form-label">NNx:</label>
+                <input type="float" class="form-control" id="NNx" name="NNx" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="pNNx" class="form-label">pNNx:</label>
+                <input type="float" class="form-control" id="pNNx" name="pNNx" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PowerVLF" class="form-label">PowerVLF:</label>
+                <input type="float" class="form-control" id="PowerVLF" name="PowerVLF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PowerLF" class="form-label">PowerLF:</label>
+                <input type="float" class="form-control" id="PowerLF" name="PowerLF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PowerHF" class="form-label">PowerHF:</label>
+                <input type="float" class="form-control" id="PowerHF" name="PowerHF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PowerTotal" class="form-label">PowerTotal:</label>
+                <input type="float" class="form-control" id="PowerTotal" name="PowerTotal" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="LF/HF" class="form-label">LF/HF:</label>
+                <input type="float" class="form-control" id="LF/HF" name="LF/HF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PeakVLF" class="form-label">PeakVLF:</label>
+                <input type="float" class="form-control" id="PeakVLF" name="PeakVLF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PeakLF" class="form-label">PeakLF:</label>
+                <input type="float" class="form-control" id="PeakLF" name="PeakLF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="PeakHF" class="form-label">PeakHF:</label>
+                <input type="float" class="form-control" id="PeakHF" name="PeakHF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="FractionLF" class="form-label">FractionLF:</label>
+                <input type="float" class="form-control" id="FractionLF" name="FractionLF" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="FractionHF" class="form-label">FractionHF:</label>
+                <input type="float" class="form-control" id="FractionHF" name="FractionHF" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Prediksi</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js CDN links (required for Bootstrap features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
